@@ -1,1 +1,2 @@
-New text in my new file...
+Edito línea 1 del archivo
+agrego línea nº 2
