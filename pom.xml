@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>io.lippia</groupId>
 		<artifactId>root</artifactId>
-		<version>3.3.0.2</version>
+		<version>3.3.0.3</version>
 	</parent>
 
 	<groupId>Lippia-Web-Example-Project</groupId>
@@ -18,7 +18,7 @@
 		<maven.build.timestamp.format>yyyyMMdd_HHmm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<!-- defult configuration chrome local -->
+		<!-- default configuration chrome local -->
 		<crowdar.projectType></crowdar.projectType>
 		<crowdar.driver.capabilities.json_path></crowdar.driver.capabilities.json_path>
 		<crowdar.setupStrategy></crowdar.setupStrategy>
@@ -123,19 +123,18 @@
 		<dependency>
 			<groupId>io.lippia</groupId>
 			<artifactId>core</artifactId>
-			<version>3.3.0.2</version>
+			<version>3.3.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>io.lippia.report</groupId>
 			<artifactId>ltm-cucumber4-adapter</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>1.4</version>
 		</dependency>
 		<dependency>
 			<groupId>io.lippia.report</groupId>
 			<artifactId>extentreports-cucumber4-adapter</artifactId>
 			<version>1.1.0.10</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.luben/zstd-jni -->
 	</dependencies>
 	<build>
 		<filters>
@@ -152,13 +151,14 @@
 						<suiteXmlFile>${runner}</suiteXmlFile>
 					</suiteXmlFiles>
 					<systemPropertyVariables>
+						<TEST_MANAGER_USERNAME></TEST_MANAGER_USERNAME>
+						<TEST_MANAGER_PASSWORD></TEST_MANAGER_PASSWORD>
 						<TEST_MANAGER_API_HOST></TEST_MANAGER_API_HOST>
 						<TEST_MANAGER_API_PORT></TEST_MANAGER_API_PORT>
 						<TEST_MANAGER_RUN_NAME></TEST_MANAGER_RUN_NAME>
 						<TEST_MANAGER_PROJECT_CODE></TEST_MANAGER_PROJECT_CODE>
-						<TEST_MANAGER_USERNAME></TEST_MANAGER_USERNAME>
-						<TEST_MANAGER_PASSWORD></TEST_MANAGER_PASSWORD>
-
+						<TEST_MANAGER_REPOSITORY_URL></TEST_MANAGER_REPOSITORY_URL>
+						<TEST_MANAGER_REPOSITORY_BRANCH></TEST_MANAGER_REPOSITORY_BRANCH>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
