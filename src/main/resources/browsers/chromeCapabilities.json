@@ -1,8 +1,21 @@
 {
 	"browserName": "chrome",
-	"goog:chromeOptions": {"args": ["disable-infobars", "--ignore-certificate-errors", "start-maximized"], 
-						   "extensions": [],
-						   "prefs": {"printing.enabled": false}
-	}, 
+	"goog:chromeOptions": {
+		"args": [
+			"--disable-infobars",
+			"--ignore-certificate-errors",
+			"--start-maximized",
+			"--remote-allow-origins=*",
+			"--disable-blink-features=AutomationControlled",
+			"--no-sandbox",
+			"--disable-dev-shm-usage"
+		],
+		"excludeSwitches": ["enable-automation"],
+
+		"prefs": {
+			"printing.enabled": false
+		}
+	},
 	"platform": "ANY"
-} 
+}
+

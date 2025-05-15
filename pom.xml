@@ -26,9 +26,13 @@
 		<runner></runner>
 
 		<!-- cucumber options -->
-		<cucumber.stepsDefinitions>--glue / </cucumber.stepsDefinitions>
+		<cucumber.stepsDefinitions>--glue lippia/web/steps </cucumber.stepsDefinitions>
+
 		<cucumber.hooks>--glue	com/crowdar/bdd/cukes/hooks</cucumber.hooks>
-		<cucumber.tags>@Smoke</cucumber.tags>
+		<!--suppress UnresolvedMavenProperty -->
+
+		<cucumber.tags>@Registration</cucumber.tags>
+
 		<pretty.plugin>--plugin pretty</pretty.plugin>
 		<crowdar.cucumber.plugins>--plugin pretty --plugin com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter: --plugin com.crowdar.examples.listeners.CucumberListener:</crowdar.cucumber.plugins>
 		<crowdar.extent.host.name>LocalMachine</crowdar.extent.host.name>
@@ -39,13 +43,13 @@
 		<crowdar.cucumber.option>src/test/resources/web/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${cucumber.report}</crowdar.cucumber.option>
 
 		<!-- client project custom properties -->
-		<web-app.url>http://www.google.com.ar</web-app.url>
+		<web-app.url>https://practice.automationtesting.in</web-app.url>
 
 	</properties>
 	<profiles>
 
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-		<!--    Profiles related to Browser requirementes    -->
+		<!--    Profiles related to Browser requirements    -->
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
 		<profile>
@@ -135,6 +139,12 @@
 			<artifactId>extentreports-cucumber4-adapter</artifactId>
 			<version>1.1.0.10</version>
 		</dependency>
+<!--		<dependency>
+			<groupId>Lippia-Web-Example-Project</groupId>
+			<artifactId>LippiaWebExampleProject</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+-->
 	</dependencies>
 	<build>
 		<filters>
