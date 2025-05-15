@@ -12,9 +12,9 @@ Feature: Registration
       And User click on "register" button
       Then User is successfully logged
       Examples:
-        | mail                      | password              | textbox          |
-        | "testregister7@gmail.com" | "abc1234.Prueba7890"  | "Email address"  |
-        | "testregister8@gmail.com" | "abc1234.Prueba0987"  | "Email address"  |
+        | mail                       | password              | textbox          |
+        | "testregister9@gmail.com"  | "abc1234.Prueba7890"  | "Email address"  |
+        | "testregister10@gmail.com" | "abc1234.Prueba0987"  | "Email address"  |
 
 
     @RegisterFail @RegisterTest2  @RegisterTest3

@@ -31,7 +31,7 @@
 		<cucumber.hooks>--glue	com/crowdar/bdd/cukes/hooks</cucumber.hooks>
 		<!--suppress UnresolvedMavenProperty -->
 
-		<cucumber.tags>@MyAccount</cucumber.tags>
+		<cucumber.tags>@Registration</cucumber.tags>
 
 		<pretty.plugin>--plugin pretty</pretty.plugin>
 		<crowdar.cucumber.plugins>--plugin pretty --plugin com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter: --plugin com.crowdar.examples.listeners.CucumberListener:</crowdar.cucumber.plugins>

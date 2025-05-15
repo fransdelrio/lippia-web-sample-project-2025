@@ -28,10 +28,10 @@ public class RegistrationService extends ActionManager {
         setInput(RegistrationConstants.REGISTRATION_TB_PASSWORD_ID, pwd);
     }
 
+
     public static boolean checkRegFailMsg(String msg) {
         WebElement element = DriverManager.getDriverInstance().findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div/div/div[1]/ul/li"));
-        System.out.println("The element:  %s%n"+ element.getText());
 
-        return true;
+        return msg.equals(element.getText());
     }
 }
